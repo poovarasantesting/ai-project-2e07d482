@@ -1,11 +1,15 @@
-import { LoginForm } from "./components/LoginForm";
-import { Toaster } from "@/components/ui/toaster";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
-      <LoginForm />
-      <Toaster />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
